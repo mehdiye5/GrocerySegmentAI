@@ -1,0 +1,166 @@
+createOrdersDataObject /data/Orders/<tenantId>
+POST
+{
+    "s3Bucket": "",
+    "s3Object": "",
+    "userId": "<column Name>",
+    "orderId: "<column name>",
+    "timestamp": ""
+}
+
+RESPONSE:
+{
+    "id": "THIS IS THE FIELD ADDITIONALLY ADDED ON RESPONSE",
+    "s3Bucket": "",
+    "s3Object": "",
+    "userId": "<column Name>",
+    "orderId: "<column name>",
+    "timestamp": ""
+}
+//////
+createProductsDataObject: /data/Products/<tenantId>
+POST
+{
+    "s3Bucket": "",
+    "s3Object": "",
+    "productId": "<column Name>",
+    "featureColumns: [
+        {
+            "columnName": ""
+        },
+        {
+            "columnName": ""
+        }
+    ]
+}
+
+RESPONSE:
+{
+    {
+    "id": "THIS IS THE FIELD ADDITIONALLY ADDED ON RESPONSE"
+    "s3Bucket": "",
+    "s3Object": "",
+    "productId": "<column Name>",
+    "featureColumns: [
+        {
+            "columnName": ""
+        },
+        {
+            "columnName": ""
+        }
+    ]
+}
+/////////
+createOrderProductsDataObject: /data/OrderProducts/<tenantId>   
+POST
+
+{
+    "s3Bucket": "",
+    "s3Object": "",
+    "orderId": "<column Name>",
+    "productId": "",
+    "featureColumns: [
+        {
+            "columnName": ""
+        },
+        {
+            "columnName": ""
+        }
+    ]
+}
+
+RESPONSE:
+{
+    "id" : "THIS IS THE FIELD ADDITIONALLY ADDED ON RESPONSE"
+    "s3Bucket": "",
+    "s3Object": "",
+    "orderId": "<column Name>",
+    "productId": "",
+    "featureColumns: [
+        {
+            "columnName": ""
+        },
+        {
+            "columnName": ""
+        }
+    ]
+}
+/////////
+createSegmentDefinition: /segment/<tenantId>
+POST
+
+{
+    "productId" "productId",
+    "destinationBucket": "",
+    "destinationObject": ""
+}
+RESPONSE:
+
+{
+    "id": "THIS IS THE FIELD ADDITIONALLY ADDED ON RESPONSE"
+    "productId" "productId" 
+}
+/////
+processSegment: /segment/<tenantId>/<id>/process
+POST
+// EMPTY
+
+RESPONSE:
+{
+    "id": "<>"
+}
+
+/////
+processTrain: /segment/<tenantId>/train
+POST
+// EMPTY
+
+RESPONSE:
+{
+    "id": "<>"
+}
+
+///////
+getSegmentStatus:  /segment/<tenantId>/<id>/status
+GET
+RESPONSE:
+{
+    "id": "ID",
+    "status": "IN PROGRESS/FAILED/SUCCESS"
+}
+
+getTrainStatus:  /segment/<tenantId>/train
+GET
+RESPONSE:
+{
+    "id": "ID",
+    "status": "IN PROGRESS/FAILED/SUCCESS"
+}
+
+getDataObject: /data/<tenantId>/<id>
+GET
+RESPONSE: ONE OF THE SAME RESPONSE FOR ORDERS/PRODUCTS/ORDERPRODUCTS
+ex.
+{
+    "id" : "THIS IS THE FIELD ADDITIONALLY ADDED ON RESPONSE",
+    "s3Bucket": "",
+    "s3Object": "",
+    "tenantId": "",
+    "orderId": "<column Name>",
+    "productId": "",
+    "featureColumns: [
+        {
+            "columnName": ""
+        },
+        {
+            "columnName": ""
+        }
+    ]
+}
+
+getSegmentDefinition: /segment/<tenantId>/<id>
+
+deleteSegmentDefinition: /segment/<tenantId>/<id>
+
+deleteDataObject: /data/<tenantId>/<id>
+

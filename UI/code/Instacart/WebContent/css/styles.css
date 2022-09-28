@@ -1,0 +1,429 @@
+/* General styles */
+.title-middle {
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.form-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.no-data-message {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.margin-top-10 {
+  margin-top: 10%;
+}
+
+.text-1_5em {
+  font-size: 1.5em;
+}
+
+.text-1_2em {
+  font-size: 1.2em;
+}
+
+.text-1em {
+  font-size: 1em;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;	
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-red {
+  color: #bf1612;
+}
+
+.btn-right {
+  text-align: right;
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.btn-back-red {
+  width: auto;
+  margin-top: 10px;
+  color: #c9302c;
+  border-color: #d43f3a;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.btn-back-red:hover { 
+  	color: #ffffff;
+  	background-color: #c9302c;
+  	border-color: #ac2925; 
+}
+
+.btn-red {
+  width: auto;
+  margin-top: 10px;
+  color: #c9302c;
+  border-color: #d43f3a;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.btn-red:hover { 
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925; 
+}
+
+.btn-red-big {
+  width: 100%;
+  color: #a72925;
+  border-color: #d43f3a;
+  padding: 15px 0;
+}
+
+.btn-red-big:hover { 
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925; 
+}
+
+.btn-blue-big {
+  width: 100%;
+  color: #163550;
+  border-color: #214f78;
+  padding: 15px 0;
+}
+
+.btn-blue-big:hover { 
+  color: #ffffff;
+  background-color: #3884c7;
+  border-color: #2c6aa0; 
+}
+
+.btn-in-fluid-padding {
+  padding-right: 10px;
+}
+
+.btn-back-white {
+  width: 15%;
+}
+
+.btn-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.btn-full-width {
+  width: 100%;
+}
+
+.div-overflow-x {
+  width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.background-gray {
+  background-color: #d9d9d9;
+}
+
+.background-dark-gray {
+  background-color: #b3b3b3;
+}
+
+.div-inline-block {
+  display: inline-block;
+  width: 100%;
+}
+
+.background-green {
+  background-color: #0cff00;
+}
+
+.background-red {
+  background-color: #ff0000;
+}
+
+/* viewCurrentServiceResponseTimeData.jsp */
+.service-response-data-table {
+  width: 40%;
+  margin: 10px auto;
+  font-size: 1em;
+  border-collapse: collapse;
+}
+
+.service-response-data-table th {
+  border: 1px solid #000000;
+  padding: 5px; 
+  text-align: center; 
+  background-color:#d9d9d9;
+}
+
+.service-response-data-table td {
+  border: 1px solid #000000;
+  padding: 5px;
+}
+
+.service-response-data-table tr>td:nth-child(odd) {
+  width: 75%;
+  text-align: left;
+}
+
+.service-response-data-table tr>td:nth-child(even) {
+  width: 25%;
+  text-align: center;
+}
+
+/* cover.jsp */
+.sla-cover-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sla-cover-dist-list-title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.sla-cover-dist-list-item {
+  font-size: 1em;
+  text-align: left;
+  margin: 5px 0;
+}
+
+/* manageDistributionList.jsp */
+.dist-list-item button {
+  visibility: hidden;
+}
+
+.dist-list-item:hover button {
+  visibility: visible;
+}
+
+.dist-list-item td {
+  width: 100px;
+  font-weight: bold;
+}
+
+.dist-list-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.dist-list-empty {
+  text-align: center;
+}
+
+.dist-list-update-btn-div {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dist-list-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* different SLA pages */
+.sla-th-yellow {
+  border: 2px solid #000000;
+  padding: 15px 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+  background-color: #feff00;
+}
+
+.sla-th {
+  border: 2px solid #000000;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.sla-td {
+  border: 1px solid #000000;
+  padding: 5px;
+}
+
+.sla-empty-cell {
+  padding: 5px;
+}
+
+.sla-container {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.sla-container-with-margin-bottom-only {
+  margin-bottom: 2em;
+}
+
+.sla-table {
+  width: 100%;
+  font-size: 1em;
+  border-collapse: collapse;
+}
+
+.sla-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  margin: 20px 0 20px 0;
+}
+
+.sla-title-without-margin {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+}
+
+.sla-subtitle {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  margin: 30px 0 20px 0;
+}
+
+.sla-text {
+  font-size: 1em;
+  text-align: left;
+  margin: 10px 0 0 0;
+}
+
+/* scorecard.jsp */
+.sla-executive-summary-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.sla-executive-summary-table {
+  width: auto;
+  font-size: 1em;
+  border-collapse: collapse;
+}
+
+/* incidentDetails.jsp */
+.system-availability-incidents-table {
+  width: 100%;
+  font-size: 1em;
+  border-collapse: collapse;
+}
+
+.system-availability-incidents-table td {
+  width: 50%;
+}
+
+.system-availability-incidents-table th {
+  width: 50%;
+}
+
+/* manageIncidents.jsp */
+.tr-included-incidents:hover {
+  background-color: #ecf9ec;
+}
+
+.tr-included-incidents button {
+  visibility: hidden;
+}
+
+.tr-included-incidents:hover button {
+  visibility: visible;
+}
+
+.tr-excluded-incidents:hover {
+  background-color: #f9ebeb;
+}
+
+.tr-excluded-incidents button {
+  visibility: hidden;
+}
+
+.tr-excluded-incidents:hover button {
+  visibility: visible;
+}
+
+.well-for-table-without-incidents {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.well-for-table-with-excluded-incidents {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ff8080;
+  border-radius: 4px;
+}
+
+.well-for-table-with-included-incidents {
+  min-height: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #33cc33;
+  border-radius: 4px;
+}
+
+/* charts.jsp */
+.sla-chart-subtitle {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+
+.sla-chart-text-center {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.sla-chart-note {
+  font-size: 1em;
+  text-align: left;
+  margin: 0;
+}
+
+.sla-chart-empty-space {
+  padding: 30px 0 0 0;
+}
+
+.sla-chart-empty-space-big {
+  padding: 50px 0 0 0;
+}

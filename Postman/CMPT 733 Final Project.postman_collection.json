@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "0b8cbd55-d073-4e78-954b-114b4dd054af",
+		"name": "CMPT 733 Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create ordersDataObject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"s3Bucket\": \"733-project\",\r\n    \"s3Object\": \"orders.csv\",\r\n    \"userId\": \"user_id\",\r\n    \"orderId\": \"order_id\",\r\n    \"timestamp\": \"timestamp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/orders/testuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"orders",
+						"testuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Segment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"28204\",\r\n    \"destinationBucket\": \"733-validation-file\",\r\n    \"destinationObject\": \"object\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process train",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser/train",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"s3Bucket\": \"733-project\",\r\n    \"s3Object\": \"products.csv\",\r\n    \"productId\": \"product_id\",\r\n    \"featureColumns\": [\r\n        {\r\n            \"columnName\": \"aisle_id\"\r\n        },\r\n        {\r\n            \"columnName\": \"department_id\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/products/testuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"products",
+						"testuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"s3Bucket\": \"733-project\",\r\n    \"s3Object\": \"all_order_products.csv\",\r\n    \"orderId\": \"order_id\",\r\n    \"productId\": \"product_id\",\r\n    \"featureColumns\": [\r\n        {\r\n            \"columnName\": \"add_to_cart_order\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/orderproducts/testuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"orderproducts",
+						"testuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get segment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser/8fbe6b96-76a2-47a6-a2b7-cf09a0424c7a",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser",
+						"8fbe6b96-76a2-47a6-a2b7-cf09a0424c7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process segment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser/e739506b-766d-4b43-8b0d-6bc20b5a56a6/process",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser",
+						"e739506b-766d-4b43-8b0d-6bc20b5a56a6",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get process status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser/a2f31001-32b2-4268-a448-bcc498ebf784/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser",
+						"a2f31001-32b2-4268-a448-bcc498ebf784",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get train",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/segment/testuser/train",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"segment",
+						"testuser",
+						"train"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
